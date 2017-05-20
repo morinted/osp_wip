@@ -21,14 +21,6 @@ social:
 # -----
 # Build
 
-collections:
-  staff_members:
-    _hide_content: true
-
-paginate: 10
-paginate_path: "/blog/:num/"
-permalink: pretty
-
 defaults:
   -
     scope:
@@ -36,37 +28,11 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      comments: true
   -
     scope:
       path: "index.html"
     values:
       layout: "default"
-  -
-    scope:
-      path: "about.html"
-    values:
-      layout: "page"
-  -
-    scope:
-      path: "team.html"
-    values:
-      layout: "page"
-  -
-    scope:
-      path: "contact.html"
-    values:
-      full_width: true
-  -
-    scope:
-      path: "blog/index.html"
-    values:
-      layout: "page"
-      comments: true
-
-gems:
-  - jekyll-seo-tag
-  - jekyll-feed
 
 exclude:
   - Gemfile

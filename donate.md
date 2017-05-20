@@ -6,11 +6,11 @@ layout: post
 
 The Open Steno Project is run by volunteers.
 
-The **best way to contribute is by being a member of the community**: giving us feedback as you learn, and using your special talents to help out Open Steno as a whole.
+The **best way to contribute is by being a member of the community**. Help by giving us feedback as you learn and using your unique talents to help out Open Steno as a whole.
 
 See our [contributing guidelines](https://github.com/openstenoproject/plover#contributing) on Plover's GitHub.
 
-We also accept donations, which are used to help fund new projects or pay maintenance costs (website and software deployment fees).
+We also accept donations, which are used to help fund new projects and pay maintenance costs (website and software deployment fees).
 
 ### Current funds
 

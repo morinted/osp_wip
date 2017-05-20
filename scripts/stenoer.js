@@ -3,21 +3,35 @@ function stenoAnimation() {
    * [toType: string, rawSteno: string, replacesLastWord: boolean]
    **/
   var phrases =
-    [ [ ['This is', 'TH-S']
+    [ [ ['Welcome', 'HR-BG']
+      , [' to', 'TO']
+      , [' open', 'OEP']
+      , [' Open Steno', 'STOEUPB', true]
+      , ['.', 'TP-PL']
+      ]
+    , [ ['This is', 'TH-S']
       , [' what', 'WHA']
+      , [' using', 'AOUFG']
       , [' steno', 'STOEUPB']
       , [' looks', 'HRAOBGS']
       , [' like', 'HRAOEUBG']
-      , ['...', 'SKWR-RBGS']
+      , ['.', 'TP-PL']
       ]
-    , [ ['Write', 'WREU']
+    , [ ['With', 'W']
+      , [' it', 'T-']
+      , [' you can', 'UBG']
+      , [' write', 'WREU']
       , [' over', 'OEFR']
-      , [' two', 'WUPB']
+      , [' two', 'TWO']
       , [' hundred', 'HUPBD']
       , [' words', 'WORDZ']
       , [' a', 'AEU']
       , [' minute', 'PHEUPB']
       , ['!', 'SKHRAPL']
+      ]
+    , [ ['Our', 'OUR']
+      , [' mission', 'PHEUGS']
+      , [':', 'KHR-PB']
       ]
     , [ ['Bring', 'PWREUPBG']
       , ['ing', '-G']
@@ -161,11 +175,16 @@ function stenoAnimation() {
     writePhrase(phrase)
     typer.pause(2000)
     asteriskPhrase(phrase)
-    typer.pause(1000)
+    typer.pause(250)
   }
-  writeAndAsterisk(phrases[0])
-  writeAndAsterisk(phrases[1])
-  writePhrase(phrases[2])
+  var i = 0
+  for (i; i < phrases.length; i++) {
+    if (i === phrases.length - 1) {
+      writePhrase(phrases[i])
+    } else {
+      writeAndAsterisk(phrases[i])
+    }
+  }
   typer.end(function(parent) {
     parent.className += ' done'
   })
