@@ -34,6 +34,9 @@ defaults:
     values:
       layout: "default"
 
+gems:
+  - jekyll-seo-tag
+
 exclude:
   - Gemfile
   - Gemfile.lock
