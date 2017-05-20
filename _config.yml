@@ -1,0 +1,75 @@
+# ----
+# Site
+
+title: Open Steno Project
+url: http://openstenoproject.org
+baseurl: /osp_wip
+google_analytics_key: UA-10044279-1
+
+# Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
+logo:
+description: Open Steno
+author:
+  name: Plover
+  email: plover@ploversteno.org
+  twitter: plover
+social:
+  name: Plover
+  links:
+    - https://www.facebook.com/openstenoproject/
+
+# -----
+# Build
+
+collections:
+  staff_members:
+    _hide_content: true
+
+paginate: 10
+paginate_path: "/blog/:num/"
+permalink: pretty
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true
+  -
+    scope:
+      path: "index.html"
+    values:
+      layout: "default"
+  -
+    scope:
+      path: "about.html"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: "team.html"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: "contact.html"
+    values:
+      full_width: true
+  -
+    scope:
+      path: "blog/index.html"
+    values:
+      layout: "page"
+      comments: true
+
+gems:
+  - jekyll-seo-tag
+  - jekyll-feed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENCE

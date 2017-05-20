@@ -1,0 +1,89 @@
+---
+title: Home
+description: Bringing stenography to everyone.
+---
+<section class="hero">
+	<div class="text-container">
+		<div class="stenoboard">
+			{% include steno-layout.html %}
+		</div>
+		<h2 class="editable">
+	    <noscript>
+	      Bringing stenography to everyone.
+	    </noscript>
+	  </h1>
+
+	</div>
+</section>
+
+<div class="content home">
+
+	<section>
+			<div class="text-container" align="center">
+				<h2>Stenography</h2>
+			</div>
+
+		<div class="container flex">
+
+			<div class="text editable">
+
+				{% include items.html section=site.data.stenography %}
+
+			</div>
+			<div class="image">
+				{% include youtubePlayer.html id="62l64Acfidc" %}
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="text-container" align="center">
+			<h2>Software</h2>
+		</div>
+		<div class="container flex">
+			<div class="text editable">
+
+        {% include items.html section=site.data.software %}
+
+			</div>
+			<div class="image">
+				<img src="images/plover_screenshot.png" alt="Screenshot" />
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="text-container" align="center">
+			<h2>Hardware</h2>
+		</div>
+		<div class="container flex">
+			<div class="text editable">
+
+	      {% include items.html section=site.data.hardware %}
+
+			</div>
+			<div class="image">
+				<img src="images/stenotoppers.png" alt="Screenshot" />
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="text-container" align="center">
+			<h2>Learn</h2>
+		</div>
+		<div class="container flex">
+			<div class="text editable">
+
+	      {% include items.html section=site.data.learn %}
+
+			</div>
+			<div class="image">
+				<div class="image">
+					{% include youtubePlayer.html id="UtQzTUEuPWo" %}
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+<script src="https://unpkg.com/typer-js"></script><script src="scripts/stenoer.js"></script>

@@ -1,0 +1,10 @@
+- links:
+  - name: Blog
+    link: /blog/
+  - name: About
+    link: /about/
+- links:
+  - name: Twitter
+    link: https://twitter.com/plover
+    social_icon: Twitter
+    new_window: true
