@@ -44,7 +44,7 @@ function stenoAnimation() {
     ]
 
   // Grab typer and wait for a little.
-  var typer = window.typer('.hero h2', 1)
+  var typer = window.typer('#stenoer', 1)
   typer.empty().line('').pause(2000)
 
   /* Draw an outline (raw steno) on the HTML steno board */
@@ -173,20 +173,82 @@ function stenoAnimation() {
 
   function writeAndAsterisk(phrase) {
     writePhrase(phrase)
-    typer.pause(2000)
+    typer.pause(1500)
     asteriskPhrase(phrase)
     typer.pause(250)
   }
-  var i = 0
-  for (i; i < phrases.length; i++) {
-    if (i === phrases.length - 1) {
-      writePhrase(phrases[i])
-    } else {
-      writeAndAsterisk(phrases[i])
+
+  function removeDoneClass(element) {
+    console.log(element)
+    var classes = element.className.split(' ')
+    var newClass = ''
+    var i = 0
+    var currentClass
+    for (i; i < classes.length; i++) {
+      currentClass = classes[i]
+      if (currentClass !== 'done' && currentClass) {
+        newClass += currentClass + ' '
+      }
     }
+    element.className = newClass
   }
-  typer.end(function(parent) {
-    parent.className += ' done'
-  })
+
+  function addDoneClass(element) {
+    var classes = element.className.split(' ')
+    var newClass = ''
+    var i = 0
+    var currentClass
+    var hasDone
+    for (i; i < classes.length; i++) {
+      currentClass = classes[i]
+      if (currentClass === 'done') {
+        hasDone = true
+      }
+      if (currentClass) {
+        newClass += currentClass + ' '
+      }
+    }
+    if (!hasDone) {
+      newClass += 'done'
+    }
+    element.className = newClass
+  }
+
+  function longAnimation() {
+    var animatedHeader = document.getElementById('stenoer')
+    if (animatedHeader.className.indexOf('done') === -1) {
+      return // Prevent double clicks.
+    }
+    removeDoneClass(animatedHeader)
+    setTimeout(function() {
+      while (animatedHeader.hasChildNodes()) {
+        animatedHeader.removeChild(animatedHeader.lastChild);
+      }
+      animatedHeader.removeAttribute('data-typer')
+      
+      typer = window.typer('#stenoer', 1)
+      typer.empty()
+      typer.line()
+      typer.pause(1000)
+      var i = 0
+      for (i; i < phrases.length; i++) {
+        if (i === phrases.length - 1) {
+          writePhrase(phrases[i])
+        } else {
+          writeAndAsterisk(phrases[i])
+        }
+      }
+      typer.end(addDoneClass)
+    }, 250)
+  }
+
+  function shortAnimation() {
+    typer.run(removeDoneClass)
+    writePhrase(phrases[phrases.length - 1])
+    typer.end(addDoneClass)
+  }
+  document.getElementById("replayButton").addEventListener("click", longAnimation);
+  console.log('uhhh')
+  shortAnimation()
 }
 stenoAnimation()

@@ -67,7 +67,7 @@ th, td {
  	padding: 0.3rem;
 }
 
-p, address {
+p, address, ul {
 	font-size: 1.05em;
 	margin-bottom: 20px;
 	font-weight: 400;
@@ -133,22 +133,57 @@ p, address {
 	}
 }
 
-.hero h2 {
-	div:first-child {
+
+$translate_offset: (-100%/11)*0.4;
+#stenoer {
+	div[data-typer-child]:first-child {
+		// Hide empty div.
 		display: none;
+	}
+	div[data-typer-child] {
+	  display: inline;
 	}
 	line-height: 40px;
 	padding-top: 20px;
-	transform: translate((-100%/11)*0.4);
+	transform: translate($translate_offset);
 	@media(max-width: 600px) {
 		line-height: initial;
 		font-size: 1.5rem;
 	}
-	&.done div:nth-child(2):after {
-		display: inline-block;
+	&:before {
+		display: inline;
 		content: "|";
 		height: 1em;
 		visibility: hidden;
+	}
+	display: inline-block;
+}
+
+#replayButton {
+	padding: 5px;
+	margin-left: $translate_offset / 2;
+	// Account for top being cut off.
+	color: white;
+	transition: all 0.25s ease-in-out;
+	visibility: hidden;
+	opacity: 0;
+	display: inline-block;
+	&:hover {
+		color: rgba(255, 255, 255, 0.7);
+	}
+	span.fa {
+		display: inline-block;
+		height: 0;
+		font-size: 1.3em;
+	}
+	.done + & {
+		visibility: visible;
+		opacity: 1;
+		@media(max-width: 600px) {
+			span.fa {
+			  font-size: 5vw;
+			}
+		}
 	}
 }
 

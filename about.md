@@ -9,7 +9,7 @@ layout: post
 
 The Open Steno Project was founded by stenographer Mirabai Knight as a reaction to the closed down, proprietary nature of the court reporting industry.
 
-To learn stenography in the early 2000s, an individual had to purchase or rent an expensive steno machine, attend college, and pay hundreds yearly for software. Imagine if to learn piano, you had to purchase one and take out a student loan!
+To learn stenography in the early 2000s, an individual had to purchase or rent an expensive steno machine, attend college, and pay hundreds yearly for software. Imagine if, to learn piano, you had to purchase one and take out a student loan!
 
 Mirabai hired a developer to write Plover and worked tirelessly with a growing community to break down barriers so that everyone who wanted to learn stenography could. Today, the Open Steno Project has enabled thousands to explore stenography without any upfront cost.
 
@@ -22,7 +22,11 @@ Mirabai believes that stenography is useful for more than just court reporters. 
 - And people who just want to type really, really fast
 - Read [Mirabai's blog post](https://stenoknight.com/SpeakFingers.html) on this topic
 
+### Timeline
+
 There is a [detailed timeline of the Open Steno Project](https://github.com/openstenoproject/plover/wiki/Open-Steno-Project-Timeline) on the Plover Wiki.
+
+### Watch a Talk on Plover
 
 Plover's lead maintainer, Ted Morin, learned stenography exclusively through the Open Steno community. He uses his steno machine to code in his day job as a software developer. Watch his talk from PyGotham 2016, captioned live in realtime by Mirabai:
 
