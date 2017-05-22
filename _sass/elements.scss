@@ -187,6 +187,29 @@ $translate_offset: (-100%/11)*0.4;
 	}
 }
 
+.center {
+	text-align: center;
+}
+.button {
+	background-color: white;
+	border: 1px solid $brand-color;
+	border-radius: 4px;
+	margin: 20px auto;
+	color: $secondary-brand-color;
+	padding: 15px 28px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+	&:hover {
+		background-color: #eee;
+		text-decoration: none;
+	}
+	& + .button {
+		margin-left: 20px;
+	}
+}
+
 .key_face {
 	text-align: center;
 	& img {

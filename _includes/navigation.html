@@ -9,6 +9,6 @@
 		{% if link.link == page.url %}
 			{% assign class = class | append: " active" %}
 		{% endif %}
-		<a href="{% include relative-src.html src=link.link %}" class="{{ class }}" {% if link.new_window %}target="_blank"{% endif %}>{{ link.name }} {% if link.icon %} <span class="fa {{link.icon}}"></span>{% endif %}</a>
+		<a href="{% include relative-src.html src=link.link %}" class="{{ class }}" {% if link.new_window %}target="_blank"{% endif %}>{{ link.name }} {% if link.icon %}&nbsp;<span class="fa {{link.icon}}"></span>{% endif %}</a>
 	{% endfor %}
 </nav>

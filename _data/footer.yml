@@ -1,10 +1,16 @@
 - links:
-  - name: Blog
-    link: /blog/
   - name: About
     link: /about/
+    relative: true
+  - name: Community
+    link: /community/
+    relative: true
 - links:
   - name: Twitter
     link: https://twitter.com/plover
-    social_icon: Twitter
+    fa_icon: twitter
+    new_window: true
+  - name: Facebook
+    link: https://facebook.com/openstenoproject
+    fa_icon: facebook-official
     new_window: true

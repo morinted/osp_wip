@@ -20,14 +20,19 @@ Mirabai believes that stenography is useful for more than just court reporters. 
 - Coders who need to write documentation and use many symbols
 - Anyone concerned about the ergonomics of typing
 - And people who just want to type really, really fast
-- Read [Mirabai's blog post](https://stenoknight.com/SpeakFingers.html) on this topic
 
-### Timeline
+Read [Mirabai's blog post](https://stenoknight.com/SpeakFingers.html) on this topic.
+
+Mirabai is a leader in our community and we have many members. Currently, the main code contributors for Plover all use stenography.
+
+### When Did Things Happen?
+
+The Open Steno Project was started in 2007 and has been constantly growing.
 
 There is a [detailed timeline of the Open Steno Project](https://github.com/openstenoproject/plover/wiki/Open-Steno-Project-Timeline) on the Plover Wiki.
 
-### Watch a Talk on Plover
+### Watch a Talk on Open Steno
 
-Plover's lead maintainer, Ted Morin, learned stenography exclusively through the Open Steno community. He uses his steno machine to code in his day job as a software developer. Watch his talk from PyGotham 2016, captioned live in realtime by Mirabai:
+Plover's current lead developer, Ted Morin, learned stenography exclusively through the Open Steno community. He uses his steno machine and Plover to code in his day job as a software developer. Watch his talk from PyGotham 2016, captioned live in realtime by Mirabai:
 
 {% include youtubePlayer.html id="CRXiNMS9JuY" %}
